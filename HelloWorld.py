@@ -1,3 +1,5 @@
+import math
+
 #exo 1
 time =6.892
 distance = 19.7
@@ -68,10 +70,10 @@ else:
 
 mail = input("Mail : ")
 
-if mail.find('@') != -1 and mail.find('.com') != -1: 
-    print("It's a mail") 
-else: 
-    print("It's not a mail") 
+if mail.find('@') != -1 and mail.find('.com') != -1:
+    print("It's a mail")
+else:
+    print("It's not a mail")
 
 #exo 7
 
@@ -213,3 +215,47 @@ for i in range(lignes):
 
 file.close()
 
+#exo 22
+
+file = open("data.txt", "r")
+content = file.read()
+list = content.split("\n")
+a = 0
+for i in list:
+    if i.find('@') != -1 and i.find('.') != -1:
+        i = i[::-1]
+        if i.find('.') < 4:
+            print("Ligne " + str(a+1) + " is a mail")
+        else:
+            print("Ligne " + str(a+1) + " is not a mail")
+    else:
+        print("Ligne " + str(a+1) + " is not a mail")
+    a += 1
+file.close()
+
+#exo 23
+
+def compterMots(phrase):
+    list = phrase.split()
+    dico = {}
+
+    for i in list:
+        dico[i] = list.count(i)
+    return dico
+
+result = compterMots("oui ici oui oui ici")
+
+#exo 24
+
+def volumeSphere(r):
+    return 4.0 / 3.0 * math.pi * r ** 3
+
+result = volumeSphere(9)
+
+#exo 25
+
+def somme(a, b, c):
+    return a + b + c
+
+tpl = 1,2,3
+print(somme(1,2,3))
