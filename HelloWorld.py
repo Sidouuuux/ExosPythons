@@ -68,10 +68,10 @@ else:
 
 mail = input("Mail : ")
 
-if mail.find('@') != -1 and mail.find('.com') != -1:
-    print("It's a mail")
-else:
-    print("It's not a mail")
+if mail.find('@') != -1 and mail.find('.com') != -1: 
+    print("It's a mail") 
+else: 
+    print("It's not a mail") 
 
 #exo 7
 
@@ -138,3 +138,68 @@ while a <= n:
 
     print(tmp)
     a+=1
+
+#exo 15
+
+list = [17, 38, 10, 25, 72]
+list.sort()
+print(list)
+
+list.append(12)
+print(list)
+
+print(list.index(17))
+
+list.remove(38)
+print(list)
+
+print(list[2:4])
+print(list[:2])
+print(list[3:])
+
+#exo 16
+
+word = input("Mot : ")
+
+print(word[::-1])
+
+#exo 17
+
+word = input("Mot : ")
+
+def palindrome(word):
+    for i in range(len(word)//2):
+        return False if word[i] != word[len(word)-i-1] else ""
+    return True
+
+pal = palindrome(word)
+print(pal)
+
+#exo 18
+
+mail = input("Mail : ")
+
+if mail.find('@') != -1 and mail.find('.') != -1:
+    mail = mail[::-1]
+    if mail.find('.') < 4:
+        print("It's a mail")
+    else:
+        print("It's not a mail")
+else:
+    print("It's not a mail")
+
+#exo 19
+
+truc = []
+machin = [i*0 for i in range(5)]
+print(truc)
+print(machin)
+
+#exo 20
+
+for x in range(4): print(x, end=" ")
+print()
+for x in range(4, 8): print(x, end=" ")
+print()
+for x in range(2, 9, 2): print(x, end=" ")
+
