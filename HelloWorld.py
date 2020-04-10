@@ -63,3 +63,78 @@ elif pression < 2.3 & volume >= 7.41:
     print("Decrease  volume")
 else:
     print("It's Ok")
+
+#exo 6
+
+mail = input("Mail : ")
+
+if mail.find('@') != -1 and mail.find('.com') != -1:
+    print("It's a mail")
+else:
+    print("It's not a mail")
+
+#exo 7
+
+for i in range(10):
+    print("Afficher 10fois un message")
+
+#exo 8
+
+word = input("Mot : ")
+
+for c in word:
+    print(c)
+
+#exo 9
+
+a = 0
+b = 10
+
+while a < b:
+    a += 1
+
+#exo 10
+
+b = 10
+
+while b > 0:
+    print(b) if b%2 != 0 else ""
+    b -= 1
+
+#exo 11
+
+number = int(input("number : "))
+
+while number < 1 or number > 10:
+    number = int(input("Invalid, retry : "))
+
+#exo 12
+
+word = input("Mot : ")
+
+for c in word:
+    print(c, end = "")
+
+print("\n")
+list = [ "Oui", "Hier", "Peut-etre", "Café"]
+
+for l in list:
+    print(l)
+
+#exo 13
+
+for i in range(0, 15, 3):
+    print(i, end = " ")
+
+#exo 14
+
+n = int(input("N : "))
+a = 1
+
+while a <= n:
+    tmp=0
+    for i in range(2):
+        tmp+=a
+
+    print(tmp)
+    a+=1
