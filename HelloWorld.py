@@ -259,3 +259,13 @@ def somme(a, b, c):
 
 tpl = 1,2,3
 print(somme(1,2,3))
+
+#épisode 3
+
+#1€ = 4AryAry
+def convert(str):
+    tab = str.split(" ")
+    tab[0] = tab[0].upper()
+    if(tab[0] == "EA"):
+        return float(tab[1]) * 4
+    return float(tab[1]) / 4
