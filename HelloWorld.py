@@ -191,7 +191,7 @@ else:
 #exo 19
 
 truc = []
-machin = [i*0 for i in range(5)]
+machin = [float(i*0) for i in range(5)]
 print(truc)
 print(machin)
 
@@ -202,4 +202,14 @@ print()
 for x in range(4, 8): print(x, end=" ")
 print()
 for x in range(2, 9, 2): print(x, end=" ")
+
+#exo 21
+
+lignes = int(input("Elements to put : "))
+file = open("data.txt", "w")
+for i in range(lignes):
+    word = input("Word : ")
+    file.write(word, "\n")
+
+file.close()
 
